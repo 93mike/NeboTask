@@ -10,17 +10,16 @@ import java.util.Scanner;
 
 public class MyTasks {
     public static void main(String[] args) throws FileNotFoundException {
-        CoreLanguageTasks.ConvertTemperatureFromFahrenheitToCeslius();
+        CoreLanguageTasks.convertTemperatureFromFahrenheitToCeslius();
         System.out.println(CoreLanguageTasks.getGratestValue());
         CoreLanguageTasks.iterateAllElements();
         CoreLanguageTasks.findLongestWordInFile();
         CoreLanguageTasks.writeElementsOfArrUsingPosition();
         CoreLanguageTasks.displayDatesWithFormat();
-
     }
 
     static class CoreLanguageTasks {
-        public static void ConvertTemperatureFromFahrenheitToCeslius() {
+        public static void convertTemperatureFromFahrenheitToCeslius() {
             System.out.println("Vvedit Fahrenheit value: ");
             Scanner scanner = new Scanner(System.in);
             double fahrenheit = scanner.nextDouble();
@@ -57,7 +56,6 @@ public class MyTasks {
             Scanner scanner = new Scanner(new File("C:\\Users\\mmazu2\\studying\\text.txt"));
             String currentWord;
             String checkedWord = "";
-            //System.out.println(scanner.next());
             while (scanner.hasNext()) {
                 currentWord = scanner.next();
                 if (currentWord.length() > checkedWord.length()) {
@@ -67,7 +65,6 @@ public class MyTasks {
             System.out.println("The longest word is:= " + checkedWord);
         }
 
-        //Write a Java program to print all the elements of an ArrayList using the position of the elements
         public static void writeElementsOfArrUsingPosition() {
             List<String> strList = Arrays.asList("One", "Two", "Tree", "Four", "London", "Lviv", "1234");
             System.out.println("Select elements from ArrList: " + strList);
